@@ -81,7 +81,7 @@ Vikit contains camera models, some math and interpolation functions that we need
 
 ```bash
 cd catkin_ws/src
-git clone https://github.com/xuankuzcr/rpg_vikit.git
+git clone git@github.com:Kodifly/rpg_vikit.git -b opencv8
 ```
 
 ### 2.6 **livox_ros_driver**
