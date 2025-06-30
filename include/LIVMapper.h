@@ -97,7 +97,6 @@ public:
   nav_msgs::Odometry imu_prop_odom;
   ros::Publisher pubImuPropOdom;
   double imu_time_offset = 0.0;
-  double lidar_time_offset = 0.0;
 
   bool gravity_align_en = false, gravity_align_finished = false;
 
@@ -137,7 +136,6 @@ public:
   PointCloudXYZI::Ptr pcl_w_wait_pub;
   PointCloudXYZI::Ptr pcl_wait_pub;
   PointCloudXYZRGB::Ptr pcl_wait_save;
-  PointCloudXYZI::Ptr pcl_wait_save_intensity;
 
   ofstream fout_pre, fout_out, fout_pcd_pos, fout_points;
 

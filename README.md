@@ -35,24 +35,21 @@ Our accompanying video is now available on [**Bilibili**](https://www.bilibili.c
 We open-source our handheld device, including CAD files, synchronization scheme, STM32 source code, wiring instructions, and sensor ROS driver. Access these resources at this repository: [**LIV_handhold**](https://github.com/xuankuzcr/LIV_handhold).
 
 ### 1.4 Our associate dataset: FAST-LIVO2-Dataset
-Our associate dataset [**FAST-LIVO2-Dataset**](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/zhengcr_connect_hku_hk/ErdFNQtjMxZOorYKDTtK4ugBkogXfq1OfDm90GECouuIQA?e=KngY9Z) used for evaluation is also available online.
-
-### 1.5 Our LiDAR-camera calibration method
-The [**FAST-Calib**](https://github.com/hku-mars/FAST-Calib) toolkit is recommended. Its output extrinsic parameters can be directly filled into the YAML file. 
+Our associate dataset [**FAST-LIVO2-Dataset**](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/zhengcr_connect_hku_hk/ErdFNQtjMxZOorYKDTtK4ugBkogXfq1OfDm90GECouuIQA?e=KngY9Z) used for evaluation is also available online. **Please note that the dataset is being uploaded gradually.**
 
 ## 2. Prerequisited
 
 ### 2.1 Ubuntu and ROS
 
-Ubuntu 18.04~20.04.  [ROS Installation](http://wiki.ros.org/ROS/Installation).
+Ubuntu 16.04~20.04.  [ROS Installation](http://wiki.ros.org/ROS/Installation).
 
 ### 2.2 PCL && Eigen && OpenCV
 
-PCL>=1.8, Follow [PCL Installation](https://pointclouds.org/). 
+PCL>=1.6, Follow [PCL Installation](https://pointclouds.org/). 
 
 Eigen>=3.3.4, Follow [Eigen Installation](https://eigen.tuxfamily.org/index.php?title=Main_Page).
 
-OpenCV>=4.2, Follow [Opencv Installation](http://opencv.org/).
+OpenCV>=3.2, Follow [Opencv Installation](http://opencv.org/).
 
 ### 2.3 Sophus
 
@@ -67,15 +64,29 @@ make
 sudo make install
 ```
 
-### 2.4 Vikit
+### 2.4 Mimalloc (optional)
+
+Mimalloc is a high-performance memory allocator developed by Microsoft, optimized for speed and memory efficiency.
+
+```bash
+git clone https://github.com/microsoft/mimalloc.git
+mkdir build && cd build && cmake ..
+make
+sudo make install
+```
+
+### 2.5 Vikit
 
 Vikit contains camera models, some math and interpolation functions that we need. Vikit is a catkin project, therefore, download it into your catkin workspace source folder.
 
 ```bash
-# Different from the one used in fast-livo1
 cd catkin_ws/src
-git clone https://github.com/xuankuzcr/rpg_vikit.git 
+git clone https://github.com/xuankuzcr/rpg_vikit.git
 ```
+
+### 2.6 **livox_ros_driver**
+
+Follow [livox_ros_driver Installation](https://github.com/Livox-SDK/livox_ros_driver).
 
 ## 3. Build
 

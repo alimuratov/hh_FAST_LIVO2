@@ -68,12 +68,12 @@ else()
 endif()
 
 # Check for mimalloc support
-find_package(mimalloc QUIET)
-if(mimalloc_FOUND)
-  message(STATUS "mimalloc found")
-else()
-  message(STATUS "mimalloc not found, proceeding without it")
-endif()
+# find_package(mimalloc QUIET)
+# if(mimalloc_FOUND)
+#   message(STATUS "mimalloc found")
+# else()
+#   message(STATUS "mimalloc not found, proceeding without it")
+# endif()
 
 # Find catkin and required dependencies
 find_package(catkin REQUIRED COMPONENTS
@@ -85,6 +85,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   pcl_ros
   tf
+  livox_ros_driver
   message_generation
   eigen_conversions
   vikit_common
@@ -140,6 +141,6 @@ target_link_libraries(fastlivo_mapping
 )
 
 # Link mimalloc if found
-if(mimalloc_FOUND)
-  target_link_libraries(fastlivo_mapping mimalloc)
-endif()
+# if(mimalloc_FOUND)
+#   target_link_libraries(fastlivo_mapping mimalloc)
+# endif()
