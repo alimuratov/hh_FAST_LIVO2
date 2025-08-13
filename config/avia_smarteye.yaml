@@ -1,5 +1,5 @@
 common:
-  img_topic: "/left_camera/image"
+  img_topic: "/hikrobot/image/sub"
   lid_topic: "/livox/lidar"
   imu_topic: "/livox/imu"
   img_en: 1
@@ -9,12 +9,13 @@ common:
 extrin_calib:
   extrinsic_T: [0.04165, 0.02326, -0.0284]
   extrinsic_R: [1, 0, 0, 0, 1, 0, 0, 0, 1]
-  Rcl: [-0.00297, -0.99992, -0.01239, -0.00119, 0.01239, -0.99992, 0.99999, -0.00296, -0.00123]
-  Pcl: [-0.00357, 0.06369, 0.00371]
+  Rcl: [-0.00216, -0.99997, -0.00697, -0.00619, 0.00698, -0.99996, 0.99998, -0.00212, -0.00620]
+  Pcl: [-0.00055, 0.08612, 0.00916]
+
 
 time_offset: 
   imu_time_offset: 0.0
-  img_time_offset: 0.1
+  img_time_offset: 0
   exposure_time_init: 0.0
 
 preprocess:
@@ -75,7 +76,7 @@ evo:
   pose_output_en: false
 
 pcd_save:
-  pcd_save_en: false
+  pcd_save_en: true
   colmap_output_en: false # need to set interval = -1
   filter_size_pcd: 0.15
   interval: -1

@@ -1,7 +1,7 @@
 cam_model: OpenCV8
 cam_width: 4096
 cam_height: 2460
-scale: 0.5
+scale: 1
 cam_fx: 1810.601483
 cam_fy: 1810.097485
 cam_cx: 2050.268673

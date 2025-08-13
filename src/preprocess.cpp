@@ -101,6 +101,8 @@ void Preprocess::avia_handler(const livox_ros_driver::CustomMsg::ConstPtr &msg)
   pl_surf.reserve(plsize);
   pl_full.resize(plsize);
 
+  
+
   for (int i = 0; i < N_SCANS; i++)
   {
     pl_buff[i].clear();
@@ -160,7 +162,7 @@ void Preprocess::avia_handler(const livox_ros_driver::CustomMsg::ConstPtr &msg)
   {
     for (uint i = 0; i < plsize; i++)
     {
-      if ((msg->points[i].line < N_SCANS)) // && ((msg->points[i].tag & 0x30) == 0x10))
+      if ((msg->points[i].line < N_SCANS) && ((msg->points[i].tag & 0x0C) == 0x00) && ((msg->points[i].tag & 0x03) == 0x00))
       {
         valid_num++;
 
