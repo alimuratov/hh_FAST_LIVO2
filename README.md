@@ -109,7 +109,23 @@ roslaunch fast_livo mapping_avia.launch
 rosbag play YOUR_DOWNLOADED.bag
 ```
 
+## 5. To run fast_livo2 for the handheld_scanner
 
-## 5. License
+1. **Export Library required for FAST-LIVO2:** 
+    ```bash
+    export LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu:$LD_LIBRARY_PATH
+    ```
+    
+2. **Source the main workspace:**
+    ```bash
+    source ~/jetson_nano_ws/devel/setup.bash
+    ```
+    
+3. **Launch fast_livo2:**
+    ```bash
+    roslaunch fast_livo mapping_avia_hh.launch
+    ``` 
+
+## 6. License
 
 The source code of this package is released under the [**GPLv2**](http://www.gnu.org/licenses/) license. For commercial use, please contact me at <zhengcr@connect.hku.hk> and Prof. Fu Zhang at <fuzhang@hku.hk> to discuss an alternative license.
